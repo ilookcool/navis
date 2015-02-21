@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Douro Express</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.poptrox.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.scrollgress.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+			<link rel="stylesheet" href="css/style-normal.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+	function LoadGmaps() {
+		var myLatlng = new google.maps.LatLng(41.1406251,-8.6114790);
+		var myOptions = {
+			zoom: 12,
+			center: myLatlng,
+			disableDefaultUI: true,
+			panControl: true,
+			zoomControl: true,
+			zoomControlOptions: {
+				style: google.maps.ZoomControlStyle.DEFAULT
+			},
+
+			mapTypeControl: true,
+			mapTypeControlOptions: {
+				style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR
+			},
+			streetViewControl: true,
+			mapTypeId: google.maps.MapTypeId.SATELLITE
+			}
+		var map = new google.maps.Map(document.getElementById("MyGmaps"), myOptions);
+		var marker = new google.maps.Marker({
+			position: myLatlng,
+			map: map,
+			title:"41.140288,-8.611325"
+		});
+		var infowindow = new google.maps.InfoWindow({
+			content: "Douro Express"
+			});
+			google.maps.event.addListener(marker, "click", function() {
+				infowindow.open(map, marker);
+			});
+	}
+</script>
+	</head>
+	<body onload="LoadGmaps()" onunload="GUnload()">
+			<header id="header">
+					<h1 id="logo"><img src="images/logo.png"></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro">Inicio</a></li>
+							<li><a href="#one">Eventos</a></li>
+							<li><a href="#two">Patrocinios</a></li>
+							<li><a href="#three">Festas</a></li>
+							<li><a href="#work">Serviços</a></li>
+							<li><a href="#contact">Contactos</a></li>
+						</ul>
+					</nav>
+			</header>
+			<section id="intro" class="main style1 dark fullscreen">
+				<div class="content container small">
+					<header>
+						<h2>Douro Express</h2>
+						<h3>Tudo que de melhor o Douro tem para lhe proporcionar!!!</h3>
+					</header>
+					<p>O Porto e Vila Nova de Gaia, cidades situadas junto à foz do rio Douro, são a principal porta de entrada para o Vale do Douro, por via rodoviária, ferrovíária ou mesmo fluvial, em cruzeiros que rumam pelo rio Douro acima em direção à zona serrana e verde da região.<br><br> 
+Na margem oposta de Vila Nova de Gaia, as caves do Vinho do Porto, aí instaladas desde o século XVIII, surgem como um convite para conhecer a região que produz uma das bebidas mais apreciadas em todo o mundo. <br><br> 
+A zona histórica, construída pelo carácter das gentes que por ali passaram e viveram, foi eleita Património Mundial pela UNESCO, em 1996.</p>
+					<footer>
+						<a href="#one" class="button style2 down">More</a>
+					</footer>
+				</div>
+			</section>
+			<section id="one" class="main style2 right dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>Eventos</h2>
+					</header>
+					<div class="frame">
+					<a href="e1.html" data-poptrox="ajax">Festa de Branco</a><br>
+					<a href="e2.html" data-poptrox="ajax">Festa de Coiso</a>
+					</div>
+				</div>
+				<a href="#two" class="button style2 down anchored">Next</a>
+			</section>
+			<section id="two" class="main style2 left dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>Patrocinios</h2>
+					</header>
+					<div class="frame">
+					<a href="p1.html" data-poptrox="ajax">Restaurante Alberto</a><br>
+					<a href="p2.html" data-poptrox="ajax">Cafe Aberto</a>
+					</div>
+				</div>
+				<a href="#three" class="button style2 down anchored">Next</a>
+			</section>
+			<section id="three" class="main style2 right dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>Historico Festas</h2>
+					</header>
+					<a href="https://www.youtube.com/watch?v=aHAt-TdX4Gg" target="_blank">DJ Vibe - 01/01/2000</a><br>
+					<a href="https://www.youtube.com/watch?v=bBxv5jvlnz4" target="_blank">DJ Antunes - 01/02/2000</a><br>
+					<a href="https://www.youtube.com/watch?v=2TBUxb_C4NY" target="_blank">DJ QQ Coisa - 01/03/2000</a><br>
+				</div>
+				<a href="#work" class="button style2 down anchored">Next</a>
+			</section>
+			<section id="work" class="main style3 dark primary">
+				<div class="content container">
+					<header>
+						<h2>Serviços</h2>
+						<p></p>
+					</header>
+						<div class="container small gallery">
+							<div class="row flush images">
+								<div class="6u"><a href="images/fulls/01.png" class="image fit from-left"><img src="images/thumbs/01.png" title="1 Dia Porto / Régua / Porto(Subida)" alt="" /></a></div>
+								<div class="6u"><a href="images/fulls/02.png" class="image fit from-right"><img src="images/thumbs/02.png" title="1 Dia Porto / Pinhão / Porto(Subida)" alt="" /></a></div>
+							</div>
+							<div class="row flush images">
+								<div class="6u"><a href="images/fulls/03.png" class="image fit from-left"><img src="images/thumbs/03.png" title="1 Dia Porto / Régua / Porto(Descida)" alt="" /></a></div>
+								<div class="6u"><a href="images/fulls/04.png" class="image fit from-right"><img src="images/thumbs/04.png" title="1 Dia Régua / Pocinho / Régua(Descida)" alt="" /></a></div>
+							</div>
+							<div class="row flush images">
+								<div class="6u"><a href="images/fulls/05.png" class="image fit from-left"><img src="images/thumbs/05.png" title="1 Dia Régua / Pinhão / Régua" alt="" /></a></div>
+								<div class="6u"><a href="images/fulls/06.png" class="image fit from-right"><img src="images/thumbs/06.png" title="Limousine" alt="" /></a></div>
+							</div>
+							<div class="row flush images">
+								<div class="6u"><a href="images/fulls/07.png" class="image fit from-left"><img src="images/thumbs/07.png" title="Carros Antigos" alt="" /></a></div>
+								<div class="6u"><a href="images/fulls/08.png" class="image fit from-right"><img src="images/thumbs/08.png" title="Tuk Tuk" alt="" /></a></div>
+							</div>
+							<div class="row flush images">
+								<div class="6u"><a href="images/fulls/09.jpg" class="image fit from-left"><img src="images/thumbs/09.jpg" title="Glow Lounge Club" alt="" /></a></div>
+								
+							</div>
+						</div>
+				</div>
+			</section>
+			<section id="contact" class="main style3 dark secondary">
+				<div class="content container">
+					<header>
+						<h2>Contacte-nos</h2>
+						<p>Ficamos a espera do seu contacto.</p>
+					</header>
+					<div class="box container small">
+							<form method="post" action="#">
+								<div class="row half">
+									<div class="6u"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="6u"><input type="email" name="email" placeholder="Email" /></div>
+								</div>
+								<div class="row half">
+								<div class="6u"><input type="tel" name="tel" placeholder="Telefone" /></div>
+								<div class="6u"><input type="ass" name="ass" placeholder="Assunto" /></div>
+								</div>
+								<div class="row half">
+									<div class="12u"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
+								</div>
+								<div class="row">
+									<div class="12u">
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+							<br>
+							<h2>Localização</h2>
+							<br>
+							<div id="MyGmaps" style="width:100%;height:400px;border:1px solid #CECECE;"></div>
+					</div>
+				</div>
+			</section>
+			<footer id="footer">
+					<ul class="actions">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+					<ul class="menu">
+						<li>&copy;Navis</li><li>Design: <a href="http://www.navis.pt" target="_blank">Navis</a></li>
+					</ul>
+			</footer>
+	</body>
+</html>
